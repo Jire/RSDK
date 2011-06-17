@@ -59,7 +59,7 @@ public class TunnelDelegate {
 		 * Tells what to do with the event once executed.
 		 * @author Thomas Nappo
 		 */
-		private enum Sub {
+		public enum Sub {
 			
 			/**
 			 * The handler will run continuously.
