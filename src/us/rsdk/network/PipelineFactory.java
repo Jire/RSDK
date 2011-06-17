@@ -10,7 +10,7 @@ public class PipelineFactory implements ChannelPipelineFactory {
 	public ChannelPipeline getPipeline() throws Exception {
 		ChannelPipeline pipeline = Channels.pipeline();
 		
-		pipeline.addLast("handler", new ChannelDelegate());
+		pipeline.addLast("handler", new ChannelHandler());
 		
 		return pipeline;
 	}

@@ -35,7 +35,11 @@ public class Server {
 	/**
 	 * Constructs a new server.
 	 * 
-	 * <p>
+	 * <p>The already created {@link #executor} will be used for 
+	 * boss/worker execution for a new {@link NioServerSocketChannelFactory}
+	 * for the {@link bootstrap}'s socket factory.</p>
+	 * 
+	 * <p>A new {@link PipelineFactory} will be created for the bootstrap as well.</p>
 	 */
 	public Server() {
 		bootstrap.setFactory(new NioServerSocketChannelFactory(executor, executor));
@@ -59,6 +63,9 @@ public class Server {
 		logger.info("Binded (" + host + "," + port + ")");
 	}
 	
+	/**
+	 * Finalizes the server.
+	 */
 	private void finish() {
 		logger.info("Accepting connections.");
 	}
