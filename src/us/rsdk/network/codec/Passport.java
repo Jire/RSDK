@@ -7,9 +7,9 @@ import us.rsdk.content.model.player.Player;
  * number of fields needed for authentication of a user.
  * 
  * <h3>Why This Approach?</h3>
- * <p>Creating a tiny passport object during authentication prevents
+ * Creating a tiny passport object during authentication prevents
  * the creation of uneeded fields. We can later use the passport as a
- * field inside of the large {@link Player} object.</p>
+ * field inside of the large {@link Player} object.<p />
  * 
  * @author Thomas Nappo
  */

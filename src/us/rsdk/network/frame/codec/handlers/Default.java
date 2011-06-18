@@ -2,6 +2,8 @@ package us.rsdk.network.frame.codec.handlers;
 
 import java.util.logging.Logger;
 
+import org.jboss.netty.buffer.ChannelBuffer;
+
 import us.rsdk.network.frame.FrameReader;
 import us.rsdk.network.frame.codec.GameFrameHandler;
 
@@ -26,7 +28,7 @@ public class Default implements GameFrameHandler {
 	private static final Logger logger = Logger.getLogger(Default.class.getName());
 
 	@Override
-	public void handle(FrameReader in) {
+	public void handle(FrameReader in, ChannelBuffer buf) {
 		logger.info("Unhandled frame: (" + in.getOpCode() + ")");
 	}
 

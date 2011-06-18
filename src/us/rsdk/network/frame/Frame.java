@@ -60,8 +60,15 @@ public abstract class Frame {
 		return opCode;
 	}
 	
-	private final ChannelBuffer buffer;
+	/**
+	 * The {@link ChannelBuffer} which provides functionality for
+	 * reading/writing to an output stream.
+	 */
+	protected final ChannelBuffer buffer;
 	
+	/**
+	 * @return The {@link #buffer} of the frame.
+	 */
 	public ChannelBuffer getBuffer() {
 		return buffer;
 	}
@@ -70,6 +77,8 @@ public abstract class Frame {
 	 * Constructs a new frame.
 	 * @param type The type of frame.
 	 * @param opCode The operation code of the frame.
+	 * @param buffer The {@link ChannelBuffer} which provides functionality for
+	 * reading/writing to an output stream.
 	 */
 	public Frame(Type type, int opCode, ChannelBuffer buffer) {
 		this.type = type;

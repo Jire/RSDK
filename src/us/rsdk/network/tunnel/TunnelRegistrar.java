@@ -6,6 +6,4 @@ package us.rsdk.network.tunnel;
  */
 public abstract class TunnelRegistrar {
 	
-	
-	
 }

@@ -6,7 +6,6 @@ public class FrameBuilder extends Frame {
 
 	public FrameBuilder(Type type, int opCode, ChannelBuffer buffer) {
 		super(type, opCode, buffer);
-		// TODO Auto-generated constructor stub
 	}
 
 }
